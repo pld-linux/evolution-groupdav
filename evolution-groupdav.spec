@@ -1,10 +1,10 @@
 Summary:	evolution-groupdav - OpenGroupware Evolution connector
-Summary(pl):	evolution-groupdav - wtyczka ³±cz±ca z OpenGroupware
+Summary(pl):	evolution-groupdav - wtyczka ³±cz±ca Evolution z OpenGroupware.org
 Name:		evolution-groupdav
-Version:	0.1
-Release:	0.1
+Version:	0.2
+Release:	0.2
 License:	GPL
-#Group:		
+Group:		X11/Applications		
 Source0:	http://noodle.yacoi.com/devel/downloads/evolution-groupdav/%{name}-%{version}.tar.gz
 # Source0-md5:
 #Patch0:
