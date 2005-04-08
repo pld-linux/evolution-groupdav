@@ -1,16 +1,16 @@
-Summary:	evolution-groupdav - OpenGroupware Evolution connector
+Summary:	evolution-groupdav - OpenGroupware.org Evolution connector
 Summary(pl):	evolution-groupdav - wtyczka ³±cz±ca Evolution z OpenGroupware.org
 Name:		evolution-groupdav
 Version:	0.2
 Release:	0.2
 License:	GPL
-Group:		X11/Applications		
+Group:		X11/Applications
 Source0:	http://noodle.yacoi.com/devel/downloads/evolution-groupdav/%{name}-%{version}.tar.gz
-# Source0-md5:
-#Patch0:
+# Source0-md5:	c3f51aae3e851dde3ce42cfe37523692
+Patch0:		%{name}-include_dir.patch
 URL:		http://noodle.yacoi.com/
-BuildRequires:	evolution-data-server-devel >= 1.1
-BuildRequires:	evolution-devel >= 2.1
+BuildRequires:	evolution-data-server-devel >= 1.2
+BuildRequires:	evolution-devel >= 2.2
 BuildRequires:	gconfmm-devel >= 2.6.0
 BuildRequires:	glib2-devel >= 2.4.0
 BuildRequires:	gnome-vfs2-devel >= 2.6.0
@@ -21,18 +21,18 @@ BuildRequires:	libgnomeprintui-devel >= 2.6.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libsoup-devel >= 2.2.0
 BuildRequires:	perl-XML-Parser
-Requires:	evolution >= 2.1
-#BuildArch:	noarch
+Requires:	evolution >= 2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-OpenGroupware Evolution connector.
+OpenGroupware.org Evolution connector.
 
 %description -l pl
 Wtyczka ³±cz±ca Evolution z systemem pracy grupowej OpenGroupware.org.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
@@ -40,7 +40,18 @@ Wtyczka ³±cz±ca Evolution z systemem pracy grupowej OpenGroupware.org.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-%{__make} install
 
 %files
+%defattr(644,root,root,755)
+%{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.la
+%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.so
+%{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.urls
+%{_prefix}/lib/evolution-data-server-1.2/extensions/libebookbackendogo.la
+%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/extensions/libebookbackendogo.so
+%{_prefix}/lib/evolution-data-server-1.2/extensions/libecalbackendogo.la
+%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/extensions/libecalbackendogo.so
+%{_prefix}/lib/evolution/2.2/plugins/liborg-opengroupware-config-eplugin.la
+%attr(755,root,root) %{_prefix}/lib/evolution/2.2/plugins/liborg-opengroupware-config-eplugin.so
+%{_prefix}/lib/evolution/2.2/plugins/org-opengroupware-config-eplugin.eplug
