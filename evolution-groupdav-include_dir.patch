@@ -1,0 +1,12 @@
+diff -uNr evolution-groupdav-0.2.orig/plugins/config/camel-ogo-listener.c evolution-groupdav-0.2/plugins/config/camel-ogo-listener.c
+--- evolution-groupdav-0.2.orig/plugins/config/camel-ogo-listener.c	2004-12-22 15:47:52.000000000 +0100
++++ evolution-groupdav-0.2/plugins/config/camel-ogo-listener.c	2005-04-08 17:09:16.000000000 +0200
+@@ -28,7 +28,7 @@
+ #include "camel-ogo-listener.h"
+ #include <string.h>
+ #include  <camel/camel-i18n.h>
+-#include <e-util/e-passwords.h>
++#include <libedataserverui/e-passwords.h>
+ 
+ /*stores some info about all currently existing ogo accounts 
+   list of OGoAccountInfo structures */
