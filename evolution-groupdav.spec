@@ -40,18 +40,22 @@ Wtyczka ³±cz±ca Evolution z systemem pracy grupowej OpenGroupware.org.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-1.2/camel-providers/*.la
+rm -f $RPM_BUILD_ROOT%{_libdir}/evolution-data-server-1.2/extensions/*.la
+rm -f $RPM_BUILD_ROOT%{_libdir}/evolution/2.2/plugins/*.la
 
 %files
 %defattr(644,root,root,755)
-%{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.la
-%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.so
-%{_prefix}/lib/evolution-data-server-1.2/camel-providers/libcamelogo.urls
-%{_prefix}/lib/evolution-data-server-1.2/extensions/libebookbackendogo.la
-%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/extensions/libebookbackendogo.so
-%{_prefix}/lib/evolution-data-server-1.2/extensions/libecalbackendogo.la
-%attr(755,root,root) %{_prefix}/lib/evolution-data-server-1.2/extensions/libecalbackendogo.so
-%{_prefix}/lib/evolution/2.2/plugins/liborg-opengroupware-config-eplugin.la
-%attr(755,root,root) %{_prefix}/lib/evolution/2.2/plugins/liborg-opengroupware-config-eplugin.so
-%{_prefix}/lib/evolution/2.2/plugins/org-opengroupware-config-eplugin.eplug
+%attr(755,root,root) %{_libdir}/evolution-data-server-1.2/camel-providers/libcamelogo.so
+%{_libdir}/evolution-data-server-1.2/camel-providers/libcamelogo.urls
+%attr(755,root,root) %{_libdir}/evolution-data-server-1.2/extensions/libebookbackendogo.so
+%attr(755,root,root) %{_libdir}/evolution-data-server-1.2/extensions/libecalbackendogo.so
+%attr(755,root,root) %{_libdir}/evolution/2.2/plugins/liborg-opengroupware-config-eplugin.so
+%{_libdir}/evolution/2.2/plugins/org-opengroupware-config-eplugin.eplug
