@@ -22,6 +22,8 @@ BuildRequires:	libgnomecanvas-devel >= 2.6.0
 BuildRequires:	libgnomeprintui-devel >= 2.6.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libsoup-devel >= 2.2.0
+BuildRequires:	heimdal-devel
+#BuildRequires:	libgssapi-devel
 BuildRequires:	perl-XML-Parser
 Requires:	evolution >= 2.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
