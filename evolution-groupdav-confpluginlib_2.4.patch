@@ -1,0 +1,92 @@
+--- evolution-groupdav-0.2/configure	2005-03-06 20:41:15.000000000 +0100
++++ evolution-groupdav-0.2/configure.new	2005-09-12 16:37:51.000000000 +0200
+@@ -20822,7 +20822,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ " >&5
+ echo $ECHO_N "checking for
+ 	glib-2.0 >= $GLIB_REQUIRED
+@@ -20842,7 +20842,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ ... $ECHO_C" >&6
+ 
+         if $PKG_CONFIG --exists "
+@@ -20863,7 +20863,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ " ; then
+             echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+@@ -20889,7 +20889,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ "`
+             echo "$as_me:$LINENO: result: $EVOGROUPDAV_CFLAGS" >&5
+ echo "${ECHO_T}$EVOGROUPDAV_CFLAGS" >&6
+@@ -20914,7 +20914,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ "`
+             echo "$as_me:$LINENO: result: $EVOGROUPDAV_LIBS" >&5
+ echo "${ECHO_T}$EVOGROUPDAV_LIBS" >&6
+@@ -20941,7 +20941,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ "`
+             echo $EVOGROUPDAV_PKG_ERRORS
+         fi
+@@ -20975,7 +20975,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ ) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&5
+ echo "$as_me: error: Library requirements (
+ 	glib-2.0 >= $GLIB_REQUIRED
+@@ -20995,7 +20995,7 @@
+     	libebook-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	libedata-cal-$EDS_PACKAGE >= $EDS_REQUIRED
+ 	camel-provider-$EDS_PACKAGE >= $EDS_REQUIRED
+-	evolution-plugin-2.2
++	evolution-plugin-2.4
+ ) not met; consider adjusting the PKG_CONFIG_PATH environment variable if your libraries are in a nonstandard prefix so pkg-config can find them." >&2;}
+    { (exit 1); exit 1; }; }
+   fi
+@@ -21018,7 +21018,7 @@
+ 
+ fi;
+ if test "x$with_plugin_install_dir" = "x" ; then
+-   PLUGIN_INSTALL_DIR=`pkg-config --variable=plugindir evolution-plugin-2.2`
++   PLUGIN_INSTALL_DIR=`pkg-config --variable=plugindir evolution-plugin-2.4`
+    if test "x$PLUGIN_INSTALL_DIR" = "x"; then
+       { { echo "$as_me:$LINENO: error: Unable to find plugin directory" >&5
+ echo "$as_me: error: Unable to find plugin directory" >&2;}
+@@ -21027,7 +21027,7 @@
+ fi
+ 
+ 
+-ERROR_DIR=`pkg-config --variable=errordir evolution-plugin-2.2`
++ERROR_DIR=`pkg-config --variable=errordir evolution-plugin-2.4`
+ if test "x$ERROR_DIR" = "x"; then
+    { { echo "$as_me:$LINENO: error: Unable to find error file directory" >&5
+ echo "$as_me: error: Unable to find error file directory" >&2;}
