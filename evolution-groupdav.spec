@@ -5,12 +5,14 @@ Version:	0.2
 Release:	0.3
 License:	GPL
 Group:		X11/Applications
-Source0:	http://noodle.yacoi.com/devel/downloads/evolution-groupdav/%{name}-%{version}.tar.gz
+#Source0:	http://noodle.yacoi.com/devel/downloads/evolution-groupdav/%{name}-%{version}.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 # Source0-md5:	c3f51aae3e851dde3ce42cfe37523692
 Patch0:		%{name}-include_dir.patch
 Patch1:		%{name}-pluginlib_2.4.patch
 Patch2:		%{name}-confpluginlib_2.4.patch
-URL:		http://noodle.yacoi.com/
+# dead domain
+#URL:		http://noodle.yacoi.com/
 BuildRequires:	evolution-data-server-devel >= 1.2
 BuildRequires:	evolution-devel >= 2.2
 BuildRequires:	gconfmm-devel >= 2.6.0
