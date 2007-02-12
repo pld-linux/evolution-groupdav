@@ -1,5 +1,5 @@
 Summary:	evolution-groupdav - OpenGroupware.org Evolution connector
-Summary(pl):	evolution-groupdav - wtyczka ³±cz±ca Evolution z OpenGroupware.org
+Summary(pl.UTF-8):   evolution-groupdav - wtyczka Å‚Ä…czÄ…ca Evolution z OpenGroupware.org
 Name:		evolution-groupdav
 Version:	0.2
 Release:	0.3
@@ -34,8 +34,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 OpenGroupware.org Evolution connector.
 
-%description -l pl
-Wtyczka ³±cz±ca Evolution z systemem pracy grupowej OpenGroupware.org.
+%description -l pl.UTF-8
+Wtyczka Å‚Ä…czÄ…ca Evolution z systemem pracy grupowej OpenGroupware.org.
 
 %prep
 %setup -q
