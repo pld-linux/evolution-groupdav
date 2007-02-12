@@ -1,5 +1,5 @@
 Summary:	evolution-groupdav - OpenGroupware.org Evolution connector
-Summary(pl.UTF-8):   evolution-groupdav - wtyczka łącząca Evolution z OpenGroupware.org
+Summary(pl.UTF-8):	evolution-groupdav - wtyczka łącząca Evolution z OpenGroupware.org
 Name:		evolution-groupdav
 Version:	0.2
 Release:	0.3
