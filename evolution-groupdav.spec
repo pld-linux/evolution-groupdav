@@ -2,7 +2,7 @@ Summary:	evolution-groupdav - OpenGroupware.org Evolution connector
 Summary(pl.UTF-8):	evolution-groupdav - wtyczka łącząca Evolution z OpenGroupware.org
 Name:		evolution-groupdav
 Version:	0.2
-Release:	0.3
+Release:	0.4
 License:	GPL
 Group:		X11/Applications
 #Source0:	http://noodle.yacoi.com/devel/downloads/evolution-groupdav/%{name}-%{version}.tar.gz
@@ -24,7 +24,7 @@ BuildRequires:	libgnomecanvas-devel >= 2.6.0
 BuildRequires:	libgnomeprintui-devel >= 2.6.0
 BuildRequires:	libgnomeui-devel >= 2.6.0
 BuildRequires:	libsoup-devel >= 2.2.0
-BuildRequires:	heimdal-devel
+BuildRequires:	krb5-devel
 BuildRequires:	gal-devel >= 2.4.0
 #BuildRequires:	libgssapi-devel
 BuildRequires:	perl-XML-Parser
